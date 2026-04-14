@@ -5,8 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taschenrechner</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #zwischenstand {
+        font-size: 1.5rem;
+        text-align: right;
+      }
+
+      #eingabe {
+        font-size: 2.5rem;
+        text-align: right;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 0.2rem;
+      }
+
+      .grid-item {
+        font-size: 2rem;
+        height: 5rem;
+        border-radius: 5px;
+        border: solid #bbb;
+      }
+
+      #list {
+        width: 15rem;
+        font-size: 2rem;
+        padding: 1rem;
+        border-left: solid 1px #ddd;
+        height: 100vh;
+        text-align: right;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+
+      .calculator {
+        flex: 1;
+        padding-right: 1rem;
+      }
+    </style>
+
+    <script src="index.js"></script>
   </head>
   <body>
-    <script src="index.js"></script>
+    <div class="wrapper">
+      <div class="calculator">
+        <div id="zwischenstand">0</div>
+        <div id="eingabe">0</div>
+        <div class="grid-container">
+          <button class="grid-item">7</button
+          ><button class="grid-item">8</button
+          ><button class="grid-item">9</button
+          ><button class="grid-item">/</button>
+          <button class="grid-item">4</button
+          ><button class="grid-item">5</button
+          ><button class="grid-item">6</button
+          ><button class="grid-item">*</button>
+          <button class="grid-item">1</button
+          ><button class="grid-item">2</button
+          ><button class="grid-item">3</button
+          ><button class="grid-item">-</button>
+          <button class="grid-item">CE</button
+          ><button class="grid-item">0</button
+          ><button class="grid-item">=</button
+          ><button class="grid-item">+</button>
+        </div>
+      </div>
+      <div id="list">1</div>
+    </div>
   </body>
 </html>
